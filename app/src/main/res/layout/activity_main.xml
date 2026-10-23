@@ -1,19 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:background="#F5F8F3"
+    android:padding="24dp">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tvTitle"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:text="Smart Pantry Manager"
+        android:textColor="#2E7D32"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWelcome"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Manage your food, track expiry dates, and reduce waste."
+        android:textColor="#555555"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSection"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="What would you like to do?"
+        android:textColor="#222222"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="28dp"
+        app:layout_constraintTop_toBottomOf="@id/tvWelcome"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Add Pantry Item"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#2E7D32"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSection"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnViewItems"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="View Pantry Items"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#558B2F"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnAddItem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnExpiry"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Check Expiry Dates"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#EF6C00"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnViewItems"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnSuggestRecipes"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Suggest Recipes"
+        android:textAllCaps="false"
+        android:textSize="16sp"
+        android:backgroundTint="#1565C0"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/btnExpiry"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tvFooter"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Organise your pantry. Save food. Save money."
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnSuggestRecipes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
